@@ -1,0 +1,30 @@
+<div class="w3-container w3-card w3-white">
+  <h2 class="w3-text-grey w3-padding-16">
+    <i
+      class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"
+    ></i
+    >Education
+  </h2>
+  <div class="w3-container w3-card w3-white ">
+   
+
+    <!-- Read in an array of skills from JSON-->
+    <div *ngFor="let x of educations">
+      <p>{{x.type}}</p>
+    
+        <div
+          class="fa fa-calendar fa-fw  w3-text-teal  "
+          style="width:{{x.date}}"
+        >
+          {{x.date}}
+        </div>
+
+        <div> 
+          {{x.info}}
+        <div>
+      
+    </div>
+
+    <br>
+  </div>
+</div><br>
