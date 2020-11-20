@@ -1,15 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 
-@Component({
-  selector: 'app-illustrations',
-  templateUrl: './illustrations.component.html',
-  styleUrls: ['./illustrations.component.css']
-})
-export class IllustrationsComponent implements OnInit {
+import { CartService } from '../cart.service';
 
-  constructor() { }
+
+@Component({
+  selector: 'app-illustration',
+  templateUrl: './illustration.component.html',
+  styleUrls: ['./illustration.component.css']
+})
+export class IllustrationComponent implements OnInit {
+  portfolioItems;
+
+
+  constructor(
+    private cartService: CartService
+  ) { }
 
   ngOnInit() {
+    this.portfolioItems = this.cartService.getIllustrationPortfolio();
   }
+
 
 }

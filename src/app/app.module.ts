@@ -32,7 +32,7 @@ import { IllustrationsComponent } from './illustrations/illustrations.component'
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
       { path: 'graphic', component: GraphicDesignComponent },
-      { path: 'illustration', component: IllustrationsComponent },
+      { path: 'illustrations', component: IllustrationsComponent },
     ])
   ],
   declarations: [
