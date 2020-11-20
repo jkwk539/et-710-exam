@@ -30,7 +30,5 @@ export class CartService {
   getGraphicDesignPortfolio() {
     return this.http.get('/assets/graphic.json');
   }
-  getIllustrationPortfolio() {
-    return this.http.get('/assets/illustration.json');
-  }
+ 
 }
