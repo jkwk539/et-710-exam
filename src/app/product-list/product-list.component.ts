@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { products } from '../products';
-
+import { CartService } from '../cart.service';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -15,6 +16,16 @@ export class ProductListComponent {
   }
   onNotify() {
     window.alert('Please Click on My Name for the Resume');
+  }
+
+  constructor(
+    private route: ActivatedRoute,
+    private cartService: CartService
+  ) { }
+
+  addToCart(product) {
+    this.cartService.addToCart(product);
+    window.alert('Your product has been added to the cart!');
   }
 }
 

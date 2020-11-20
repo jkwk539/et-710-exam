@@ -14,16 +14,25 @@ import { ResumeWorkExperienceComponent } from './my-resume/resume-work-experienc
 import { ResumeEducationComponent } from './my-resume/resume-education/resume-education.component';
 import { ResumeFooterComponent } from './my-resume/resume-footer/resume-footer.component';
 import { CartService } from './cart.service';
+import { CartComponent } from './cart/cart.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ShippingComponent } from './shipping/shipping.component';
+import { GraphicDesignComponent } from './graphic-design/graphic-design.component';
+import { IllustrationsComponent } from './illustrations/illustrations.component';
 
 @NgModule({
   imports: [
     BrowserModule,
+    HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: 'tutorial', component: ProductListComponent },
-      { path: 'tutorial/products/:productId', component: ProductDetailsComponent },
-      { path: '', component: MyResumeComponent },
-
+      { path: '', component: ProductListComponent },
+      { path: '', component: ProductDetailsComponent },
+      { path: 'products/:productId', component: MyResumeComponent },
+      { path: 'cart', component: CartComponent },
+      { path: 'shipping', component: ShippingComponent },
+      { path: 'graphic', component: GraphicDesignComponent },
+      { path: 'illustration', component: IllustrationsComponent },
     ])
   ],
   declarations: [
@@ -36,7 +45,11 @@ import { CartService } from './cart.service';
     ResumeProfileComponent,
     ResumeWorkExperienceComponent,
     ResumeEducationComponent,
-    ResumeFooterComponent
+    ResumeFooterComponent,
+    CartComponent,
+    ShippingComponent,
+    GraphicDesignComponent,
+    IllustrationsComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [CartService]

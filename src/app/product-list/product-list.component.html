@@ -1,9 +1,7 @@
-
-
-<div *ngFor="let product of products; index as productId">
+<div *ngFor="let product of products">
 
   <h3>
-    <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
+    <a [title]="products.name + ' details'" [routerLink]="['/products', productId]">
       {{ product.name }}
     </a>
   </h3>
@@ -11,6 +9,8 @@
   <p *ngIf="product.description">
     {{ product.description }}
   </p>
+
+  <button (click)="addToCart(product)">Gallery</button>
 
  
   <app-product-alerts
