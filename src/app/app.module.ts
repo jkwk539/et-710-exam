@@ -18,6 +18,7 @@ import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
 import { GraphicDesignComponent } from './graphic-design/graphic-design.component';
+import { IllustrationComponent } from './illustration/illustration.component';
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { GraphicDesignComponent } from './graphic-design/graphic-design.componen
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
       { path: 'graphic', component: GraphicDesignComponent },
-      
+      { path: 'illustration', component: IllustrationComponent },
     ])
   ],
   declarations: [
@@ -49,6 +50,7 @@ import { GraphicDesignComponent } from './graphic-design/graphic-design.componen
     CartComponent,
     ShippingComponent,
     GraphicDesignComponent,
+    IllustrationComponent,
     
   ],
   bootstrap: [ AppComponent ],
